@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import PrivateRoute from './pages/PrivateRoute'
-import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
@@ -13,9 +13,9 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         <Route 
-          path="/home" 
+          path="/dash" 
           element={<PrivateRoute> 
-                      <Home/> 
+                      <Dashboard/> 
                   </PrivateRoute>} />
       </Routes>
     </BrowserRouter>

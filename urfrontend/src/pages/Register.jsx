@@ -25,13 +25,13 @@ function Register() {
     } catch (error) {
       alert(
         "Registration failed: " +
-          (error.response ? error.response.data.message : error.message)
+        (error.response ? error.response.data.message : error.message)
       );
       console.error("Registration error:", error);
     }
   };
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50 p-4">
 
       <div className="mb-2 text-center">
         <div className="flex items-center justify-center mb-2">
@@ -102,23 +102,6 @@ function Register() {
                   {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                 </button>
               </div>
-            </div>
-            <div className="flex items-center space-x-2 mt-10">
-              <input
-                type="checkbox"
-                id="terms"
-                className="h-4 w-4 rounded border-border cursor-pointer"
-              />
-              <label htmlFor="terms" className="text-sm">
-                I agree to the{" "}
-                <button className="text-primary hover:underline font-medium cursor-pointer">
-                  Terms of Service
-                </button>{" "}
-                and{" "}
-                <button className="text-primary hover:underline font-medium cursor-pointer">
-                  Privacy Policy
-                </button>
-              </label>
             </div>
             <button className="bg-[#0F0E0E] text-white w-full h-10 rounded-lg cursor-pointer">
               Create Account

@@ -23,18 +23,22 @@ function Login() {
       localStorage.setItem("user", JSON.stringify(response.data.user));
       alert("Login successful!");
       console.log("Login successful:", response.data);
-      window.location.href = "/home";
+      window.location.href = "/dash";
     } catch (error) {
       alert(
         "Login failed: " +
-          (error.response ? error.response.data.message : error.message)
+        (error.response ? error.response.data.message : error.message)
       );
       console.error("Login error:", error);
     }
   };
+
+  const handleSoon = () => {
+    alert("Feature coming soon!");
+  }
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-4">
-      
+    <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50 p-4">
+
       <div className="mb-2 text-center">
         <div className="flex items-center justify-center mb-2">
           <Shield className="h-8 w-8 text-primary mr-2 text-[#FFD93D]" />
@@ -89,18 +93,8 @@ function Login() {
                 </button>
               </div>
             </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  id="remember"
-                  className="h-4 w-4 rounded border-border"
-                />
-                <label htmlFor="remember" className="text-sm">
-                  Remember me
-                </label>
-              </div>
-              <button className="text-sm text-primary hover:underline">
+            <div className="flex items-center justify-end">
+              <button onClick={handleSoon} className="text-sm text-primary hover:underline cursor-pointer">
                 Forgot password?
               </button>
             </div>
