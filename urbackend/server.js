@@ -12,7 +12,7 @@ console.log('JWT_SECRET:', !!process.env.JWT_SECRET ? 'Loaded ‚úÖ' : 'Missing ‚ù
 const app = express();
 
 app.use(cors({
-    origin: "https://ursafe-2-0-frontend.onrender.com",
+    origin: "https://ursafe2.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
