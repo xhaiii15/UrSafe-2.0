@@ -26,7 +26,7 @@ function Dashboard({ onPostCreated, newPost }) {
         try {
             const token = localStorage.getItem("token");
             const res = await axios.post(
-                "http://localhost:5000/api/posts/create",
+                "https://ursafe-2-0-backend.onrender.com/api/posts/create",
                 { title, description },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -45,7 +45,7 @@ function Dashboard({ onPostCreated, newPost }) {
     const fetchPosts = async () => {
         try {
             const token = localStorage.getItem("token");
-            const res = await axios.get("http://localhost:5000/api/posts", {
+            const res = await axios.get("https://ursafe-2-0-backend.onrender.com/api/posts", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setPosts(res.data);
@@ -78,7 +78,7 @@ function Dashboard({ onPostCreated, newPost }) {
         try {
             const token = localStorage.getItem("token");
             await axios.put(
-                `http://localhost:5000/api/posts/${selectedPost._id}`,
+                `https://ursafe-2-0-backend.onrender.com/api/posts/${selectedPost._id}`,
                 {
                     title: editTitle,
                     description: editDescription,
