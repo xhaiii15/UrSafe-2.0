@@ -16,7 +16,7 @@ function Register() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://ursafe-2-0-backend.onrender.com/api/auth/register",
         form
       );
       alert("Registration successful!");
