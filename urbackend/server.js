@@ -6,6 +6,9 @@ const authRoutes = require('./routes/authRoutes');
 const postRoutes = require('./routes/postRoutes');
 
 dotenv.config();
+console.log('MONGO_URI:', !!process.env.MONGO_URI ? 'Loaded ✅' : 'Missing ❌');
+console.log('JWT_SECRET:', !!process.env.JWT_SECRET ? 'Loaded ✅' : 'Missing ❌');
+
 const app = express();
 
 app.use(cors({
