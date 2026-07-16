@@ -37,27 +37,3 @@ The application focuses on secure user authentication and seamless data persiste
 
 ---
 
-## 🔑 Key Security Implementations
-
-Since this application is called **UrSafe**, security is built directly into its core:
-1. **Password Hashing:** Passwords are never saved in plain text. They are securely encrypted using `bcrypt` algorithms.
-2. **Protected API Routes:** Backend endpoints for managing notes are locked behind a custom JWT authentication middleware. Only users with a valid token can access their data.
-3. **CORS Configuration:** Configured to strictly allow requests only from authorized frontend origins to prevent cross-site scripting vulnerabilities.
-
----
-
-## 📁 Project Structure
-
-```text
-ursafe/
-├── backend/            # Express.js API, JWT middleware, models, and DB configurations
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   └── routes/
-└── frontend/           # React SPA, Axios fetch requests, Tailwind layouts, and pages
-    ├── src/
-    │   ├── components/
-    │   ├── pages/
-    │   └── App.jsx
